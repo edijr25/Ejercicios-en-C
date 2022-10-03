@@ -1,0 +1,5 @@
+15:14:11 **** Clean-only build of configuration Debug for project hello ****
+rm -rf src/hello.o hello.exe src/hello.d 
+
+15:14:11 Build Finished. 0 errors, 0 warnings. (took 512ms)
+

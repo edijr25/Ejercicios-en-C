@@ -1,0 +1,73 @@
+/*
+ ============================================================================
+ Name        : 2.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+/*Ingresar 10 números enteros, distintos de cero. Mostrar:
+Cantidad de pares e impares.
+El menor número ingresado.
+De los pares el mayor número ingresado.
+Suma de los positivos.
+Producto de los negativos.
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int i;
+	int contadorPar = 0;
+	int contadorImpar =0;
+	int acumuladorPositivo=0;
+	int acumuladorNegativo =0;
+	int num;
+	int menorNum;
+	int mayorNumPar;
+	int flag = 0;
+	setbuf(stdout,NULL);
+
+	for(i=0 ; i<5; i++){
+		printf ("Ingrese un numero: ");
+		scanf ("%d", &num);
+
+	if(num %2 ==0){
+		contadorPar++;
+	  if(flag ==0 || mayorNumPar < num){
+		  mayorNumPar = num;
+	  }else{
+		  contadorImpar++;
+	  }
+	  if(flag == 0 || menorNum > num){
+		  menorNum = num;
+		  flag = 1;
+	  }
+
+	  if (num> 0){
+		  acumuladorPositivo += num;
+	  } else{
+		  acumuladorNegativo += num;
+	  }
+
+	}
+	//A) Cantidad de pares e impares.
+	printf("\ncantidad de numeros pares es: %d", contadorPar);
+	printf("\n\ncantidad de numeros impares es: %d", contadorImpar);
+	//B) El menor número ingresado.
+	printf("\n\nEl menor numero ingresado es: %d", menorNum);
+	//C) De los pares el mayor número ingresado.
+	printf("\n\nEl mayor numero ingresado par es: %d", mayorNumPar);
+	//D) Suma de los positivos.
+	printf("\n\nLa suma de los numeros positivos es: %d", acumuladorPositivo);
+	//E) Producto de los negativos.
+	printf("\n\nEl producto de los negativos es: %d", acumuladorNegativo);
+
+	}
+
+
+
+	return EXIT_SUCCESS;
+}

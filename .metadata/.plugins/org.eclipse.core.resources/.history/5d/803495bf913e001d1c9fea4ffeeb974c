@@ -1,0 +1,37 @@
+/*
+ ============================================================================
+ Name        : 2.c
+ Author      : Edicilio López
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+//ingresar 3 números y mostrar cuál de los tres es el mayor.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int num1;
+	int num2;
+	int num3;
+	printf("Ingresar un numero: ");
+	scanf("%d", &num1);
+
+	printf("Ingresar un numero: ");
+	scanf("%d", &num2);
+
+	printf("Ingresar un numero: ");
+	scanf("%d", &num3);
+
+	if(num1> num2 && num1>num3){
+		printf("%d", num1);
+	}else if (num2>num1 && num2>num3){
+		printf("%d", num2);
+	}else{
+		printf("%d", num3);
+	}
+
+	return EXIT_SUCCESS;
+}

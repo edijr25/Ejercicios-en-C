@@ -1,0 +1,45 @@
+/*
+ ============================================================================
+ Name        : hello.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+//Pedir 5  numeros dar como resultado y minimo
+#include <stdio.h>
+#include <stdlib.h>
+#define TRUE 1
+#define FALSE 0
+
+int main(void) {
+	setbuf(stdout,NULL);
+	int minNum;
+	int maxNum;
+    int i;
+    int bufferInt;
+    int flag = 1;
+
+    for (i=0; i<5; i++)
+    {
+     printf("Ingrese el numero %d \n", i+1);
+    scanf("%d", &bufferInt);
+    if(flag == TRUE)
+    {
+      maxNum = bufferInt;
+      minNum = bufferInt;
+      flag = FALSE;
+    } else
+    { if(bufferInt> maxNum){
+    	maxNum = bufferInt;
+    }
+    if(bufferInt< minNum){
+    	minNum = bufferInt;
+    }
+    }
+    }
+    printf("El minimo es %d \n", minNum);
+	printf("El maximo es %d", maxNum);
+	return EXIT_SUCCESS;
+}

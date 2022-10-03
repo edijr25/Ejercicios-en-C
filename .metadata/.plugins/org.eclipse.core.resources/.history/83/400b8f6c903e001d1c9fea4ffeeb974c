@@ -1,0 +1,31 @@
+/*
+ ============================================================================
+ Name        : 1.c
+ Author      : Edicilio López
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+//Ejercicio 1-1: Ingresar dos números enteros, sumarlos y mostrar el resultado.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int num1;
+	int num2;
+	int resultado;
+
+	setbuf(stdout, NULL);
+
+	printf("Ingrese un numero: ");
+	scanf("%d",&num1);
+
+	printf ("Ingrese un numero: ");
+	scanf("%d", &num2);
+
+	resultado = num1 + num2;
+	printf("La suma de los 2 numeros ingresados es %d", resultado); /* prints !!!Hello World!!! */
+	return EXIT_SUCCESS;
+}

@@ -1,0 +1,30 @@
+/*
+ ============================================================================
+ Name        : 1.c
+ Author      : Edicilio Lopez
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+/* Ingresar 5 números enteros calcular y mostrar el promedio de los números.
+ *  Probar la aplicación con distintos valores. */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int contador;
+	int acumulador;
+	int num;
+	setbuf(stdout,NULL);
+
+	for(contador=0 ;contador<5; contador++){
+		printf ("Ingrese un numero: ");
+		scanf ("d%", &num);
+		acumulador += num;
+	}
+	printf("%d y %d", acumulador, contador);
+
+	return EXIT_SUCCESS;
+}
